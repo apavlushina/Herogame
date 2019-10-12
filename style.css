@@ -69,9 +69,6 @@ header {
   border-bottom: solid 8px #1cb34d;
 }
 
-
-
-
 .demo {
   width: 700px;
   height: 300px;
@@ -91,89 +88,36 @@ header {
 
 .hero {
     position: absolute;
-    bottom: 0;
+    bottom: 40px;
     left: 50%;
     margin-left: 350px;
 }
 
 .enemy {
     position: absolute;
-    bottom: 35px;
+    bottom: 75px;
     left: 50%;
     margin-left: -400px;
 }
 
-.photogallery {
-  position: relative;
-
-  width: 1000px;
-  padding: 10px 0;
-
-  text-align: center;
+.dagger {
+    position: absolute;
+    bottom: 75px;
+    left: 750px;
 }
 
-.photogallery-title {
-  margin-bottom: 35px;
+.inn {
+    position: absolute;
+    top: 30px;
+    left: 200px;
 }
 
-.photogallery-image {
-  display: inline-block;
-  width: 292px;
-  height: 271px;
-  margin: 21px 8px;
-  overflow: hidden;
-
-  border: 0;
-  box-shadow: 7px 10px 0 rgba(0, 0, 0, 0.30), 0 0 20px rgba(255, 255, 190, 0.3);
+.bag {
+    position: absolute;
+    bottom: 0;
+    left: 53%;
+    margin-left: 350px;
 }
-
-.reviews {
-  box-sizing: border-box;
-  width: 670px;
-}
-
-.reviews-title {
-  margin-bottom: 30px;
-}
-
-.reviews-filter {
-  margin-bottom: 60px;
-
-  white-space: nowrap;
-}
-
-.reviews-filter-item {
-  display: inline-block;
-  margin-right: 50px;
-
-  font-weight: bold;
-  font-size: 22px;
-  vertical-align: middle;
-  color: #ffffff;
-
-  border-bottom: dotted 2px #ffffff;
-  cursor: pointer;
-}
-
-.reviews-filter input {
-  position: absolute;
-  left: -1200em;
-}
-
-input[type=radio]:checked + .reviews-filter-item {
-  margin-right: 35px;
-  margin-left: -15px;
-  padding: 0 15px;
-
-  line-height: 36px;
-  color: #000000;
-
-  background: #ffffff;
-  border-bottom: solid 2px;
-  box-shadow: 3px 3px 0 #000000;
-  cursor: auto;
-}
-
 
 
 footer {
@@ -203,23 +147,8 @@ footer p {
   background: rgba(0, 0, 0, 0.8);
 }
 
-.review-form {
-  position: relative;
 
-  width: 510px;
-  margin: 100px auto;
-  padding: 0 10px;
-
-  text-align: left;
-}
-
-.review-form-title {
-  font-family: "PT Mono";
-  text-align: left;
-}
-
-.overlay-gallery-close,
-.review-form-close {
+.overlay-gallery-close {
   position: absolute;
   top: -5px;
   right: 0;
@@ -232,94 +161,6 @@ footer p {
   cursor: pointer;
 }
 
-.review-form-group {
-  margin: 0;
-  margin-bottom: 15px;
-  padding: 0;
-
-  border: 0;
-}
-
-.review-form-group-mark {
-  min-height: 55px;
-  margin-left: -15px;
-}
-
-.review-form-group-mark .review-form-label {
-  margin-left: 15px;
-}
-
-.review-form-group-mark input[type=radio] {
-  position: absolute;
-
-  visibility: hidden;
-}
-
-.review-mark-label {
-  background: none;
-  color: #ffffff;
-  cursor: pointer;
-  height: 30px;
-  margin: 0 10px;
-  position: absolute;
-  text-indent: -100em;
-  width: 40px;
-}
-
-.review-mark-label-1 { width: 40px; }
-.review-mark-label-2 { width: 80px; }
-.review-mark-label-3 { width: 120px; }
-.review-mark-label-4 { width: 160px; }
-.review-mark-label-5 {
-  background: url('../img/icon-star-inactive-form.png') repeat-x;
-  width: 200px;
-}
-
-input[type=radio]:checked + .review-mark-label {
-  background: url('../img/icon-star.png') repeat-x;
-}
-
-.review-form-label {
-  font-size: 20px;
-  line-height: 1.6;
-}
-
-.review-form-field {
-  padding: 5px;
-
-  font: 20px/1.5 "PT Mono";
-  color: #000000;
-
-  background: #ffffff;
-  border: 0;
-}
-
-.review-form-field-name {
-  width: 15em;
-}
-
-.review-form-controls {
-  white-space: nowrap;
-}
-
-.review-form-control {
-  display: inline-block;
-
-  vertical-align: top;
-}
-
-.review-fields {
-  font-size: 16px;
-  color: #ffffff;
-  color: rgba(255, 255, 255, 0.6);
-  white-space: normal;
-}
-
-.review-fields-label {
-  text-decoration: underline;
-
-  cursor: pointer;
-}
 
 .footer-link {
   position: relative;
@@ -390,7 +231,6 @@ input[type=radio]:checked + .review-mark-label {
   display: inline-block;
 
   margin-right: 5px;
-  margin-top: -10px;
   border-radius: 40px;
   overflow: hidden;
   vertical-align: middle;
@@ -434,57 +274,44 @@ input[type=radio]:checked + .review-mark-label {
   transform: translateY(-0.3em);
 }
 
-.setup-artifacts-shop {
+.setup-health {
   display: flex;
   flex-wrap: wrap;
-  justify-content: flex-end;
+  justify-content: flex-start;
 
-  padding-top: 20px;
-  padding-bottom: 20px;
+  padding-left: 20px;
 
   width: 716px;
   height: 65px;
+  color: white;
 }
 
-.setup-player {
-  padding-top: 20px;
-  position: relative;
-
-  height: 300px;
-  min-height: 300px;
+.health-title {
+    width: 150px;
+    padding: 20px;
+    margin-right: -90px;
 }
 
-.setup-wizard {
-  width: 250px;
-  height: 250px;
-
-  position: absolute;
-  bottom: 0;
-  left: 50px;
+.number--info {
+    text-align: center;
+    padding-top: 15px;
+    
 }
 
-.setup-fireball-wrap {
-  position: absolute;
-  left: 300px;
-  top: 0;
-
-  width: 75px;
-  height: 75px;
-
-  background: #ee4830;
+.small--picture {
+    text-align: center;
+    padding-top: 10px;
+    
 }
 
-.setup-fireball {
-  background: url('../img/fireball-mask.png');
-  background-size: 75px 75px;
-  width: 75px;
-  height: 75px;
+.setup-wizzard {
+  padding: 30px;
 }
 
 .setup-artifacts {
   position: absolute;
-  bottom: 0;
-  right: 46px;
+  bottom: 180px;
+  right: 130px;
 
   display: flex;
   flex-wrap: wrap;
@@ -492,9 +319,12 @@ input[type=radio]:checked + .review-mark-label {
 
   width: 260px;
   height: 260px;
+
+  color: white;
 }
 
 .setup-artifacts-cell {
+  position: relative;
   width: 65px;
   height: 65px;
 
@@ -515,61 +345,10 @@ input[type=radio]:checked + .review-mark-label {
   background-color: #da641a;
 }
 
-.setup-similar-title {
-  color: #fff;
-
-  margin-left: 20px;
-}
-
-.setup-similar-list {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-
-  margin-left: 20px;
-  margin-right: 20px;
-
-  flex-wrap: nowrap;
-}
-
-.setup-similar-item {
-  max-width: 150px;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
-
-.setup-similar-label {
-  margin: 5px;
-
-  color: #fff;
-
-}
-
-.setup-similar-content {
-  position: relative;
-
-  width: 150px;
-  height: 150px;
-
-  background-color: #414342;
-  box-shadow: 5px 5px 0 rgba(0, 0, 0, 0.25);
-}
-
-.setup-similar-wizard {
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-  bottom: 0;
-
-  margin: 0 auto;
-
-  width: 100px;
-}
-
 .setup-submit {
   display: block;
-  margin: 20px auto 0;
-
+  margin: 20px auto;
+  width: 175px;
   background: #1cb34d;
   color: #fff;
 }
@@ -644,7 +423,7 @@ input[type=radio]:checked + .review-mark-label {
 
   position: absolute;
   left: 0;
-  top: 0;
+  top: 10px;
 }
 
 .upload input {

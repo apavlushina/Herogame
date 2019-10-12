@@ -12,19 +12,76 @@
   <main>
     <header>
         <h1>Will the wizzard win?</h1>
-        <div class="setup-open">
-            <img class="settings" src="./img/settings.png" alt="Settings" width="50px">
-        </div>
     </header>
+
     <section class="main-section">
-      
+      <img class="inn" id='inn' src="./img/inn.jpg" alt="inn" width="40px">
       <img class="enemy" src="./img/evil2.png" alt="ENEMY" width="100px">
       <img class="hero" src="./img/wizzard.png" alt="HERO" width="150px">
+      <img class="dagger" id='dagger' src="./img/dagger.jpg" alt="dagger" width="40px">
+      <img class="bag" id='bag' src="./img/bag.jpg" alt="bag" width="40px">
     </section>
-<div class="toBeClicked">
-  <img id='inn' src="./img/inn.jpg" alt="inn" width="40px">
-  <img id='dagger' src="./img/dagger.jpg" alt="dagger" width="40px">
-  <img id='bag' src="./img/bag.jpg" alt="bag" width="40px">
+
+<div class="setup-open">
+    <img src="./img/settings.png" class="setup-open-icon" tabindex="0"">
+  </div>
+</header>
+
+<div class="overlay setup hidden">
+  <form class="setup-wizard-form">
+
+    <div class="setup-title">
+      <div class="setup-user">
+        <div class="upload">
+          <img class="setup-user-pic" src="./img/settings.png">
+        </div>
+        <label>
+          <input type="text" name="username"
+                minlength="2"  maxlength="25" required
+                 class="setup-user-name" value="Pendalf Blue"/>
+        </label>
+      </div>
+
+      <span class="setup-close" tabindex="0">&times;</span>
+    </div>
+
+
+    <div class="setup-health">
+      <div class="setup-artifacts-cell small--picture"><img src="./img/inn.jpg" alt="Health" width="45" height="45">
+      </div>
+      <div class="health-title">Health</div>
+      <div class="setup-artifacts-cell number--info health"></div>
+    </div>
+
+    <div class="setup-wizzard">
+        <img src="./img/wizzard.png" alt="HERO" width="250px">
+    </div>
+
+
+      <div class="setup-artifacts">
+        <p>Your iventory and damage</p>
+        <p>Weapon</p>
+        
+        <div class="setup-artifacts-cell small--picture"></div>
+        <div class="setup-artifacts-cell number--info"></div>
+
+        <p>Weapon</p>
+        <div class="setup-artifacts-cell"></div>
+        <div class="setup-artifacts-cell"></div>
+
+        <p>Weapon</p>
+        <div class="setup-artifacts-cell"></div>
+        <div class="setup-artifacts-cell"></div>
+
+        <p>Weapon</p>
+        <div class="setup-artifacts-cell"></div>
+        <div class="setup-artifacts-cell"></div>
+      </div>
+
+
+      <button class="button setup-submit">Save</button>
+    </div>
+  </form>
 </div>
   </main>
 
