@@ -1,4 +1,5 @@
 // Write your JS here
+//main var and functions to pass the tests
 const hero = {
     name: 'Harry Potter',
     heroic: true,
@@ -46,3 +47,50 @@ console.log(dagger);
 
 let bag = document.querySelector('#bag');
 bag.addEventListener('click', function() {equipWeapon(hero)} );
+
+//popup 
+
+var ESC_KEYCODE = 27;
+var ENTER_KEYCODE = 13;
+
+
+var blockSetup = document.querySelector('.setup');
+var setupOpen = document.querySelector('.setup-open');
+var setupClose = blockSetup.querySelector('.setup-close');
+var inputName = blockSetup.querySelector('.setup-user-name');
+
+var onPopupEscPress = function(evt) {
+  if (evt.keyCode === ESC_KEYCODE && document.activeElement !== inputName) {
+    closePopup();
+  }
+};
+
+var openPopup = function() {
+  blockSetup.classList.remove('hidden');
+  document.addEventListener('keydown', onPopupEscPress);
+};
+
+var closePopup = function() {
+  blockSetup.classList.add('hidden');
+  document.removeEventListener('keydown', onPopupEscPress);
+};
+
+setupOpen.addEventListener('click', function() {
+  openPopup();
+});
+
+setupOpen.addEventListener('keydown', function(evt) {
+  if (evt.keyCode === ENTER_KEYCODE) {
+    openPopup();
+  }
+});
+
+setupClose.addEventListener('click', function() {
+  closePopup();
+});
+
+setupClose.addEventListener('keydown', function(evt) {
+  closePopup();
+})
+
+
