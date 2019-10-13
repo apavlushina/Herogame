@@ -80,6 +80,7 @@ const blockSetup = document.querySelector('.setup');
 const setupOpen = document.querySelector('.setup-open');
 const setupClose = blockSetup.querySelector('.setup-close');
 const inputName = blockSetup.querySelector('.setup-user-name');
+const setupSubmitButton = blockSetup.querySelector('.setup-submit');
 
 const onPopupEscPress = function(evt) {
   if (evt.keyCode === ESC_KEYCODE && document.activeElement !== inputName) {
@@ -115,6 +116,12 @@ setupClose.addEventListener('keydown', function(evt) {
   closePopup();
 })
 
+setupSubmitButton.addEventListener('click', function(evt) {
+    evt.preventDefault();
+    let newName = inputName.value;
+    inputName.value = newName;
+    closePopup();
+  })
 //popup data
 
 let healthValue = blockSetup.querySelector('.health');
