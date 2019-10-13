@@ -29,7 +29,16 @@ function equipWeapon (person) {
     if (person.inventory.length)
     person.weapon = person.inventory[0];
     console.log(person.weapon);
+    let newWeapon = document.getElementById('newWeapon');
+    newWeapon.innerHTML = '<img class="weapon" src="./img/dagger.jpg" width="40px"></img>';
 };
+
+function killEnemy () {
+    let heroHasWeapon = document.querySelector('.weapon');
+    if (heroHasWeapon) {
+        enemy.style.display = 'none';
+    }
+}
 
 let updateWeapon = () => {
     hero.inventory.push(
@@ -48,15 +57,18 @@ let updateWeapon = () => {
 
 };
 
-let img = document.querySelector('#inn');
+const img = document.querySelector('#inn');
 img.addEventListener('click', () => rest(hero));
 
 
-let dagger = document.querySelector('#dagger');
+const dagger = document.querySelector('#dagger');
 dagger.addEventListener('click', updateWeapon);
 
-let bag = document.querySelector('#bag');
+const bag = document.querySelector('#bag');
 bag.addEventListener('click', function() {equipWeapon(hero)} );
+
+const enemy = document.querySelector('.enemy');
+enemy.addEventListener('click', killEnemy);
 
 //popup 
 
@@ -109,5 +121,5 @@ let healthValue = blockSetup.querySelector('.health');
 
 healthValue.textContent = hero.health;
 
-console.log(hero.inventory)
+
 

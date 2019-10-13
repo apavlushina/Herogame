@@ -119,6 +119,13 @@ header {
     margin-left: 350px;
 }
 
+.weapon {
+    position: absolute;
+    bottom: 165px;
+    left: 50%;
+    margin-left: 460px;
+}
+
 
 footer {
   font-size: 16px;
