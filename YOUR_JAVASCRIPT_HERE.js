@@ -31,6 +31,7 @@ function equipWeapon (person) {
     console.log(person.weapon);
     let newWeapon = document.getElementById('newWeapon');
     newWeapon.innerHTML = '<img class="weapon" src="./img/dagger.jpg" width="40px"></img>';
+    
 };
 
 function killEnemy () {
@@ -48,6 +49,8 @@ let updateWeapon = () => {
     })
     dagger.style.display = 'none';
     dagger.removeEventListener('click', updateWeapon);
+
+    bag.classList.add('animation');
 
     let sells = Array.from(document.querySelectorAll('.setup-artifacts-cell'));
     

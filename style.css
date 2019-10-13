@@ -140,6 +140,16 @@ footer p {
   padding-bottom: 20px;
 }
 
+@keyframes rotate {
+    100% {-webkit-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+      transform: rotate(360deg);}
+  }
+
+.animation {
+    animation: rotate 1s;
+}
+
 .overlay-container,
 .overlay-gallery {
   position: fixed;
